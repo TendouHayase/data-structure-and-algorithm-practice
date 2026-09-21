@@ -36,7 +36,7 @@ template <typename _Tp, typename Container = Deque<_Tp>> class queue
     {
     }
     explicit queue(value_type value, size_type sz)
-        : c(value, sz), cap(sz == 0 ? 10 : sz)
+        : c(sz, value), cap(sz == 0 ? 10 : sz)
     {
     }
     template <typename InputIter,
